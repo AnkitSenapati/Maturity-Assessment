@@ -1,0 +1,62 @@
+﻿@model MaturityDAL.Models.UserSurvey
+
+<style>
+    form {
+        margin-left: 120px;
+    }
+
+    #in {
+        width: 270px;
+        background-color: lightcyan;
+        border-color: dimgrey;
+        /*color:black;*/
+    }
+
+    .frm {
+        margin-top: 50px;
+        margin-left: 200px;
+        background-color: rgb(128 128 128);
+        background-image: url(http://architizer-prod.imgix.net/mediadata/projects/032013/1cff9c04.jpg?q=60&auto=format,compress&cs=strip&w=1680);
+        background-size: cover;
+        opacity: 0.9;
+        border-radius: 10px;
+        width: 650px;
+    }
+</style>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="frm">
+    <div class="cls">
+        <h4 style="text-align:center;text-shadow:3px 3px 4px #000000">UserSurvey</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="SurveyId" class="control-label"></label>
+                        <select id="in" asp-for="SurveyId" class="form-control" asp-items="ViewBag.SurveyId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="QuestionId" class="control-label"></label>
+                        <select id="in" asp-for="QuestionId" class="form-control" asp-items="ViewBag.QuestionId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AnswerId" class="control-label"></label>
+                        <select id="in" asp-for="AnswerId" class="form-control" asp-items="ViewBag.AnswerId"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ProjectMemberId" class="control-label"></label>
+                        <select id="in" asp-for="ProjectMemberId" class="form-control" asp-items="ViewBag.ProjectMemberId"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>

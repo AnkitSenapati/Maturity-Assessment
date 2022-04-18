@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MaturityDAL.Models.UserSurvey>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Answer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectMember)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Question)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Survey)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer.AnswerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectMember.ProjectMemberId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question.QuestionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Survey.SurveyName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UserSurveyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserSurveyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserSurveyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

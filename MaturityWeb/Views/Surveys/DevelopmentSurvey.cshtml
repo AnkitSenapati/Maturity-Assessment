@@ -1,0 +1,350 @@
+﻿@model IEnumerable<MaturityDAL.Models.SurveyClass>
+@{
+    Layout = null;
+}
+
+<style>
+    body {
+        background: url(https://th.bing.com/th/id/R.0117019c721bee66a6f26fb6161be931?rik=A%2bccSFcYNicB1A&riu=http%3a%2f%2fbinary.edu.my%2fweb%2fwp-content%2fuploads%2f2016%2f03%2finternational-mkt.jpg&ehk=Mqs6y6dSRYP6oA35kE94tTU3YjHdnB5kXMvmw0FTcwA%3d&risl=&pid=ImgRaw&r=0);
+        background-size: cover;
+        text-align: center;
+    }
+
+    /* Styling the Body element i.e. Color,
+                Font, Alignment */
+    body {
+        background-color: #05c46b;
+        font-family: Verdana;
+        text-align: center;
+    }
+
+    /* Styling the Form (Color, Padding, Shadow) */
+    form {
+        background-color: #fff;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Styling form-control Class */
+    .form-control {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input,
+                select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+            /* Styling form-control Radio
+                button and Checkbox */
+            .form-control input[type="radio"],
+            .form-control input[type="checkbox"] {
+                display: inline-block;
+                width: auto;
+            }
+
+    /* Styling Button */
+    button {
+        background-color: #05c46b;
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        font-size: 21px;
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <h1>
+        Development Survey Form
+    </h1>
+    <div>
+
+
+        <form id="form">
+
+            @foreach (var item in Model)
+            {
+                <p>@Html.DisplayFor(modelItem => item.qstndetails.QuestionName)></p>
+                foreach (var item1 in Model)
+                {
+                    if (item.ansdetails.QuestionId == item1.ansdetails.QuestionId)
+                    {
+                        <input type="radio" value="" required>@Html.DisplayFor(modelItem => item1.ansdetails.AnswerName)
+                    }
+                }
+            }
+            <!--<div class="form-control">
+    <label>
+        Did the customer support team resolve all your product/service related queries?
+    </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            What recommendations would you offer to improve our product/service?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            In your opinion, what improvements can be made for the competing products now available?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            What is it that you like most about competing products currently available?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+        <input type="radio"
+               id="recommed-1"
+               name="recommed">Yes</input>
+    </label>
+    <label for="recommed-2">
+        <input type="radio"
+               id="recommed-2"
+               name="recommed">No</input>
+    </label>
+    <label for="recommed-3">
+        <input type="radio"
+               id="recommed-3"
+               name="recommed">Maybe</input>
+    </label>
+    <div class="form-control">
+        <label>
+            In your opinion, what improvements can be made to the product/service?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            In your opinion, what are the things that you like most about the product/service?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            In your opinion, what are the things that you like most about the product/service?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            In your opinion, what are the things that you like most about the product/service?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Yes</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">No</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Maybe</input>
+        </label>
+    </div>
+    <div class="form-control">
+        <label>
+            In your opinion, what are the things that you like most about the product/service?
+        </label>-->
+            <!-- Input Type Radio Button -->
+            <!--<label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recommed">Yes</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recommed">No</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recommed">Maybe</input>
+            </label>
+        </div>
+    </div>
+    <div class="form-control">
+        <label>
+            Languages and Frameworks known
+            <small>(Check all that apply)</small>
+        </label>-->
+            <!-- Input Type Checkbox -->
+            <!--<label for="inp-1">
+            <input type="checkbox"
+                   name="inp">C</input>
+        </label>
+        <label for="inp-2">
+            <input type="checkbox"
+                   name="inp">C++</input>
+        </label>
+        <label for="inp-3">
+            <input type="checkbox"
+                   name="inp">C#</input>
+        </label>
+        <label for="inp-4">
+            <input type="checkbox"
+                   name="inp">Java</input>
+        </label>
+        <label for="inp-5">
+            <input type="checkbox"
+                   name="inp">Python</input>
+        </label>
+        <label for="inp-6">
+            <input type="checkbox"
+                   name="inp">JavaScript</input>
+        </label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">React</input>
+        </label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">Angular</input>
+        </label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">.NetCore</input>
+        </label>
+        <label for="inp-7">
+            <input type="checkbox"
+                   name="inp">MongoDB</input>
+        </label>
+    </div>-->
+
+            <div class="form-control">
+                <label for="comment">
+                    Any comments or suggestions
+                </label>
+
+                <!-- multi-line text input control -->
+                <textarea name="comment" id="comment"
+                          placeholder="Enter your comment here">
+            </textarea>
+            </div>
+
+            <!-- Multi-line Text Input Control -->
+            <a style="text-decoration: none;"><button asp-controller="Report" asp-action="DevelopmentReport" class="btn btn-success">Submit</button></a>
+
+        </form>
+    </div>
+</body>
