@@ -10,12 +10,7 @@ Maturity Assessment Tool
 	PROJECT Member 6	Swagatika Badajena		
 	PROJECT Member 7	Ankit Kumar Sahoo		
 	Project Status	:- Completed		
-				
-1) You can see SRS here
- 
-2) You can see PPT here
-
-3) You can see Product and Scrum Backlog here
+ You can see Product and Scrum Backlog here
 
 
 [Product_And_Scrum_Backlog.xls](https://github.com/AnkitSenapati/Maturity-Assessment/files/8505518/Product_And_Scrum_Backlog.xls)
