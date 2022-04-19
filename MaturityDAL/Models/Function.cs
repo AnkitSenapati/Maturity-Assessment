@@ -14,6 +14,7 @@ namespace MaturityDAL.Models
         }
 
         public int FunctionId { get; set; }
+        [Required(ErrorMessage = "Function Name can not be null")]
         public string FunctionName { get; set; }
 
         public virtual ICollection<Project> Projects { get; set; }
