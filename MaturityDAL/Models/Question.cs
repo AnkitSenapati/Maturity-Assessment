@@ -14,6 +14,7 @@ namespace MaturityDAL.Models
         }
 
         public int QuestionId { get; set; }
+        [Required(ErrorMessage = "Question Name can not be null")]
         public string QuestionName { get; set; }
         public int? FunctionId { get; set; }
 
