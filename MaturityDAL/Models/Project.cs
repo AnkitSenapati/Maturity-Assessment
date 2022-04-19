@@ -11,7 +11,8 @@ namespace MaturityDAL.Models
         {
             ProjectMembers = new HashSet<ProjectMember>();
         }
-
+        
+        [Required(ErrorMessage = "Project Name can not be null")]
         public string ProjectName { get; set; }
         public int ProjectId { get; set; }
         public string ProjectDesc { get; set; }
