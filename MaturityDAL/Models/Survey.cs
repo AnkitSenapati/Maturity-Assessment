@@ -11,10 +11,13 @@ namespace MaturityDAL.Models
         {
             UserSurveys = new HashSet<UserSurvey>();
         }
-
+        
+        [Required(ErrorMessage = "Survey Name can not be null")]
         public int SurveyId { get; set; }
         public string SurveyName { get; set; }
+        [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
+        [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
 
         public virtual ICollection<UserSurvey> UserSurveys { get; set; }
