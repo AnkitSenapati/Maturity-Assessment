@@ -124,7 +124,7 @@ namespace MaturityWeb.Controllers
                     }
                 }
             }
-            ModelState.AddModelError("", "Email or Password is Invalid");
+            ModelState.AddModelError("", "Email_or_Password_is_Invalid");
             return View();
         }
     }
