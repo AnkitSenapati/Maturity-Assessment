@@ -2,10 +2,12 @@
 @{
     Layout = null;
 }
+
 <style>
     body {
         background: url(https://slideuplift.com/wp-content/uploads/2020/06/Plain-Background-1209-768x576.jpg);
         background-size: cover;
+        text-align: center;
     }
 
     /* Styling the Body element i.e. Color,
@@ -18,7 +20,7 @@
 
     /* Styling the Form (Color, Padding, Shadow) */
     form {
-        background-color:mistyrose ;
+        background-color: mistyrose;
         max-width: 500px;
         margin: 50px auto;
         padding: 30px 20px;
@@ -72,41 +74,43 @@
         margin-bottom: 20px;
     }
 </style>
+
 <body>
+    <h1>
+        Development Survey Form
+    </h1>
     <div>
-        <h1>
-            Testing Survey Form
-        </h1>
-        <!-- multistep form -->            
 
 
-            <form id="form">
-                @foreach (var item in Model)
+        <form id="form">
+
+            @foreach (var item in Model)
+            {
+                <p>@Html.DisplayFor(modelItem => item.qstndetails.QuestionName)</p>
+                foreach (var item1 in Model)
                 {
-                    <p>@Html.DisplayFor(modelItem => item.qstndetails.QuestionName)</p>
-                    foreach (var item1 in Model)
+                    if (item.ansdetails.QuestionId == item1.ansdetails.QuestionId)
                     {
-                        if (item.ansdetails.QuestionId == item1.ansdetails.QuestionId)
-                        {
-                            <input type="radio" value="">@Html.DisplayFor(modelItem => item1.ansdetails.AnswerName);
-                        }
+                        <input type="radio" value="" required>@Html.DisplayFor(modelItem => item1.ansdetails.AnswerName)
                     }
                 }
+            }
+         
 
-                <div class="form-control">
-                    <label for="comment">
-                        Any comments or suggestions
-                    </label>
+            <div class="form-control">
+                <label for="comment">
+                    Any comments or suggestions
+                </label>
 
-                    <!-- multi-line text input control -->
-                    <textarea name="comment" id="comment"
-                              placeholder="Enter your comment here">
+                <!-- multi-line text input control -->
+                <textarea name="comment" id="comment"
+                          placeholder="Enter your comment here">
             </textarea>
-                </div>
+            </div>
 
-                <!-- Multi-line Text Input Control -->
-                <a style="text-decoration: none;"> <button asp-controller="Report" asp-action="TestingReport" class="btn btn-success">Submit</button></a>
-            </form>
-        </div>
+            <!-- Multi-line Text Input Control -->
+            <a style="text-decoration: none;"><button asp-controller="Report" asp-action="DevelopmentReport" class="btn btn-success">Submit</button></a>
 
+        </form>
+    </div>
 </body>
