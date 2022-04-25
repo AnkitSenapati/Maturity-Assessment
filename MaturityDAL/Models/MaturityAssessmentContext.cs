@@ -31,7 +31,7 @@ namespace MaturityDAL.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-L1IDKIJ;Database=MaturityAssessment;Integrated Security=true");
+                optionsBuilder.UseSqlServer("Server=ROHANJHA;Database=MaturityAssessment;Integrated Security=true");
             }
         }
 
